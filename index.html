@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autotmatic Email Processor</title>
+</head>
+<body>
+    <h1>Autotmatic Email processor</h1>
+    <a href="/test-email">process Test Email</a>
+    <h2>Processed Emails</h2>
+
+    <table border="1"cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Sender</th>
+            <th>Subject</th>
+            <TH>Body</TH>
+            <th>category</th>
+        </tr>
+        {% for email in emails%}
+        <tr>
+           <td>{{email[0]}}</td>
+           <td>{{email[1]}}</td>
+           <td>{{email[2]}}</td>
+           <td>{{email[3]}}</td>
+           <td>{{email[4]}}</td>
+        </tr>
+        {%endfor%}
+    </table>    
+
+</body>
+</html>
